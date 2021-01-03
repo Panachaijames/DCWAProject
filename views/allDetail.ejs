@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        a{
+            text-decoration: none;
+            color: seashell;
+        }
+    </style>
+
+<body>
+
+<h1>All Details</h1>
+
+<% allDetail.forEach((all)=> { %>
+
+<form action="/allDetails/<%=all.cty_code%>" method = "GET">
+  <label>City Code:</label>
+  <input type="text" name="cty_code" value="<%=all.cty_code%>"><br><br>
+  <label >City Name:</label>
+  <input type="text" name="cty_name" value="<%=all.cty_name%>"><br><br>
+  <label >City Population:</label>
+  <input type="number" name="population" value="<%=all.population%>"><br><br>
+  <label >By the Sea:</label>
+  <input type="text" name="isCoastal" value="<%=all.isCoastal%>"><br><br>
+  <label >Area(KM):</label>
+  <input type="number" name="areaKM" value="<%=all.areaKM%>"><br><br>
+  <label >Country Code:</label>
+  <input type="text" name="co_code" value="<%=all.co_code %>"><br><br>
+  <label >Country name:</label>
+  <input type="text" name="co_name" value="<%=all.co_name%>"><br><br>
+
+</form>
+
+  <% }) %>
+
+    <br><br>
+    <br><br>
+    <br><br>
+    
+    <button class="btn btn-secondary"><a href="/city" class="button">&#60;&#60;CITY</a> </button>
+    <button class="btn btn-secondary"><a href="/" class="button">&#60;&#60;HOME</a> </button>
+</body>
+</html>
